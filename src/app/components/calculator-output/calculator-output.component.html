@@ -1,0 +1,30 @@
+<div class="bg-cyan-dark rounded-3xl py-5 px-10 pt-9 text-white font-bold">
+  <div class="flex flex-col">
+    <div class="flex justify-between">
+      <div class="flex flex-col">
+        <div>Tip Amount</div>
+        <div class="text-sm text-cyan-dark-gray">/ person</div>
+      </div>
+      <div class="text-4xl">${{ tip }}</div>
+    </div>
+    <div class="flex justify-between mt-10">
+      <div class="flex flex-col">
+        <div>Total</div>
+        <div class="text-sm text-cyan-dark-gray">/ person</div>
+      </div>
+      <div class="text-4xl">${{ total }}</div>
+    </div>
+    <button
+      type="button"
+      class="
+        btn-reset
+        mt-32
+        disabled:cursor-not-allowed disabled:bg-cyan-primary
+      "
+      [disabled]="disableReset"
+      (click)="onClick()"
+    >
+      RESET
+    </button>
+  </div>
+</div>

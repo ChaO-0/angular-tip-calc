@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
+}
+
+@layer components {
+  .input-form {
+    @apply appearance-none border rounded-md w-full py-2 px-3 text-right border-none bg-cyan-input focus:outline-none focus:ring-2 focus:ring-cyan-outline;
+  }
+
+  .btn {
+    @apply bg-cyan-dark hover:bg-cyan-light text-white hover:text-cyan-dark py-2.5 rounded-md font-bold;
+  }
+
+  .btn-reset {
+    @apply bg-cyan-outline hover:bg-cyan-light text-cyan-dark hover:text-cyan-dark py-2.5 rounded-md font-bold;
+  }
+}
