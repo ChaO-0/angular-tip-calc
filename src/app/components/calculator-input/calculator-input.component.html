@@ -1,1 +1,55 @@
-<p>calculator-input works!</p>
+<div class="font-bold text-cyan-primary">
+  <div class="relative">
+    <label for="bill">Bill</label>
+    <input
+      type="text"
+      name="bill"
+      class="input-form mt-2 text-lg font-bold text-cyan-dark"
+      placeholder="0"
+      [(ngModel)]="bill"
+      (ngModelChange)="onBillChange($event)"
+    />
+    <img src="assets/images/icon-dollar.svg" class="absolute bottom-3 left-4" />
+  </div>
+  <div class="mt-7">
+    <label for="tip" class="block">Select Tip %</label>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-lg mt-3">
+      <button
+        [ngClass]="{
+          btn: true,
+          'bg-cyan-outline text-cyan-dark': _percent === percent
+        }"
+        *ngFor="let _percent of percents"
+        (click)="onClick(_percent)"
+      >
+        {{ _percent + "%" }}
+      </button>
+      <input
+        type="text"
+        name="percent"
+        [(ngModel)]="percent"
+        class="
+          text-black text-right
+          px-6
+          focus:outline-none focus:ring-2 focus:ring-cyan-outline
+          rounded-md
+          font-bold
+          text-cyan-dark
+        "
+        placeholder="Custom"
+      />
+    </div>
+  </div>
+  <div class="mt-7 relative">
+    <label for="people">Number of people</label>
+    <input
+      type="text"
+      name="people"
+      class="input-form mt-2 text-lg font-bold text-cyan-dark"
+      placeholder="0"
+      [(ngModel)]="people"
+      (ngModelChange)="onPeopleChange($event)"
+    />
+    <img src="assets/images/icon-person.svg" class="absolute bottom-3 left-4" />
+  </div>
+</div>
