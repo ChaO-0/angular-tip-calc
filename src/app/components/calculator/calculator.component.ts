@@ -16,11 +16,6 @@ export class CalculatorComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onClick(percent: number) {
-    this.percent = percent;
-    console.log(this.percent);
-  }
-
   calculateTip() {
     return Number(this.bill) > 0 && Number(this.people) > 0 && this.percent > 0
       ? (
