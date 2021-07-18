@@ -1,13 +1,13 @@
 <div class="container mx-auto max-w-4xl mt-16">
   <div class="bg-white rounded-3xl">
     <div class="grid md:grid-cols-2 p-10 gap-8">
-      <div class="font-bold">
+      <div class="font-bold text-cyan-primary">
         <div class="relative">
           <label for="bill">Bill</label>
           <input
             type="text"
             name="bill"
-            class="input-form mt-2 text-lg font-bold"
+            class="input-form mt-2 text-lg font-bold text-cyan-dark"
             placeholder="0"
             [(ngModel)]="bill"
           />
@@ -38,6 +38,8 @@
                 px-6
                 focus:outline-none focus:ring-2 focus:ring-cyan-outline
                 rounded-md
+                font-bold
+                text-cyan-dark
               "
               placeholder="Custom"
             />
@@ -48,7 +50,7 @@
           <input
             type="text"
             name="people"
-            class="input-form mt-2 text-lg font-bold"
+            class="input-form mt-2 text-lg font-bold text-cyan-dark"
             placeholder="0"
             [(ngModel)]="people"
           />
