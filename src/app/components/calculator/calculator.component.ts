@@ -9,7 +9,6 @@ export class CalculatorComponent implements OnInit {
   bill = '';
   people = '';
 
-  percents = [5, 10, 15, 25, 50];
   percent: number | string = '';
 
   constructor() {}
