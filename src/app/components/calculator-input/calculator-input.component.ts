@@ -20,7 +20,19 @@ export class CalculatorInputComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  checkPeople() {
+    if (typeof this.people === 'number') {
+      return +this.people === 0;
+    }
+    return false;
+  }
+
   onClick(percent: number) {
+    this.percent = percent;
+    this.percentChange.emit(percent);
+  }
+
+  onPercentChange(percent: number) {
     this.percent = percent;
     this.percentChange.emit(percent);
   }
