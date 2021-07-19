@@ -2,9 +2,10 @@
   <div class="relative">
     <label for="bill">Bill</label>
     <input
-      type="text"
+      type="number"
       name="bill"
       class="input-form mt-2 text-lg font-bold text-cyan-dark"
+      style="appearance: text-field"
       placeholder="0"
       [(ngModel)]="bill"
       (ngModelChange)="onBillChange($event)"
@@ -25,7 +26,7 @@
         {{ _percent + "%" }}
       </button>
       <input
-        type="text"
+        type="number"
         name="percent"
         [(ngModel)]="percent"
         class="
@@ -43,7 +44,7 @@
   <div class="mt-7 relative">
     <label for="people">Number of people</label>
     <input
-      type="text"
+      type="number"
       name="people"
       class="input-form mt-2 text-lg font-bold text-cyan-dark"
       placeholder="0"
