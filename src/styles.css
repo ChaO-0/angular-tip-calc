@@ -13,7 +13,7 @@ body {
 
 @layer components {
   .input-form {
-    @apply appearance-none border rounded-md w-full py-2 px-3 text-right border-none bg-cyan-input focus:outline-none focus:ring-2 focus:ring-cyan-outline;
+    @apply appearance-none border rounded-md w-full py-2 px-3 text-right bg-cyan-input focus:outline-none focus:ring-2 focus:ring-cyan-outline;
   }
 
   .btn {

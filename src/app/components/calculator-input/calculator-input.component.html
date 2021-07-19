@@ -4,7 +4,7 @@
     <input
       type="number"
       name="bill"
-      class="input-form mt-2 text-lg font-bold text-cyan-dark"
+      class="input-form mt-2 text-lg font-bold text-cyan-dark border-none"
       style="appearance: text-field"
       placeholder="0"
       [(ngModel)]="bill"
@@ -38,15 +38,24 @@
           text-cyan-dark
         "
         placeholder="Custom"
+        (ngModelChange)="onPercentChange($event)"
       />
     </div>
   </div>
   <div class="mt-7 relative">
-    <label for="people">Number of people</label>
+    <div class="flex justify-between">
+      <label for="people">Number of people</label>
+      <div *ngIf="checkPeople()" class="text-red-400">Can't be zero</div>
+    </div>
     <input
       type="number"
       name="people"
       class="input-form mt-2 text-lg font-bold text-cyan-dark"
+      [ngClass]="{
+        'focus:ring-red-400': checkPeople(),
+        'border-red-400': checkPeople(),
+        'border-none': !checkPeople()
+      }"
       placeholder="0"
       [(ngModel)]="people"
       (ngModelChange)="onPeopleChange($event)"
